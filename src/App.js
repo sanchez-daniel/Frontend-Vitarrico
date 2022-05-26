@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+    <body className="App">
+      <div className="contenedor">
+        <img className="Logo-Vtarrico" src="logo.png" alt="logo vitarrico" />
+        <input id="email" type="email" placeholder="@correo" required />
+        <input
+          id="contraseña"
+          type="password"
+          placeholder="contraseña"
+          required
+          maxLength={"10"}
+          minLength={"5"}
+        />
+        <div id="Botones">
+          <button className="inicio">
+            <Link to="/Login">Login</Link>
+          </button>
+        </div>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          className="R-contraseña"
+          href="https://email-send-roan.vercel.app/"
+          target={"blank"}
         >
-          Learn React
+          Recuperar contraseña
         </a>
-      </header>
-    </div>
+      </div>
+    </body>
   );
 }
 
